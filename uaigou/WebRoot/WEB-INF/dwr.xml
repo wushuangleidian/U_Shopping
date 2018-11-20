@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dwr>
+    <allow>
+        <create creator="new" javascript="DwrPush">
+            <param name="class" value="cn.uaigou.utils.DwrPush"></param>
+            <!-- 这个标签可以写也可以不写，无所谓的-->
+            <include method="shopping"/>
+        </create>
+    </allow>
+</dwr>

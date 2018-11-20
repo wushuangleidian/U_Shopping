@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<script type="text/javascript" src="layer/layer.js" ></script>
+		
+		<button id="btn">按钮</button>
+		<br />
+		<input type="text" id="userName" />
+		<script>
+			 $('#btn').on('click', function(){
+    			layer.open({
+					  type: 2,
+					  area: ['700px', '450px'],
+					  fixed: true, //不固定
+					  maxmin: false,
+					  shadeClose:true,
+					  content: 'test/iframe.html'
+				});	
+  			});
+  			
+  			$("#userName").on("mouseenter",function(){
+  				layer.tips('输入姓名', '#userName');
+  			});
+  			
+		</script>
+		
+	</body>
+</html>

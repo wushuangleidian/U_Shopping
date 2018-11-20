@@ -1,0 +1,378 @@
+.my-index-body {
+	background-color: #F8F8F8;
+	padding-bottom: 50px;
+}
+/*回到顶部按钮*/
+#my-backtop {
+	border: 1px solid #DDD;
+	width: 40px;
+	height: 40px;
+	position: fixed;
+	bottom: 100px;
+	right: 50px;
+	text-align: center;
+	line-height: 40px;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	cursor: pointer;
+	background-color: #fff;
+	color: #888;
+	border-radius: 5px;
+}
+
+#my-backtop:hover {
+	border-color: #FF5722;
+	color: #FF5722;
+}
+
+.index-content {
+	height: 500px;
+	background-color: blue;
+}
+
+.my-daohang1 { /*横向导航栏*/
+	height: 50px;
+	background-color: #FF5722;
+	font-size: 20px;
+	text-align: left;
+	text-indent: 15px;
+	line-height: 50px;
+	color: #fff;
+	cursor: default;
+	z-index: 100;
+}
+
+.my-daohang2 { /*纵向导航*/
+	border: 1px solid #FF5722;
+	position: absolute;
+	height: 430px;
+	width: 99.5%;
+	top: -1px;
+	left: 0px;
+	background-color: #fff;
+}
+
+.layui-col-md9 a { /*横向导航菜单*/
+	display: block;
+	float: left;
+	height: 50px;
+	width: 120px;
+	color: #fff;
+	text-indent: 0px;
+	text-align: center;
+	line-height: 50px;
+	font-size: 16px;
+	margin: 0px 10px;
+}
+
+.layui-col-md9 a:hover {
+	background-color: #FFB800;
+	color: #fff;
+}
+
+.my-daohang2 li {
+	width: 102%;
+	height: 42px;
+	font-size: 15px;
+	color: #666;
+	letter-spacing: 4px;
+	line-height: 42px;
+	text-indent: 20px;
+	cursor: pointer;
+}
+
+.my-daohang2 span {
+	display: block;
+	height: 30px;
+	line-height: 30px;
+	float: right;
+	margin-right: 20px;
+}
+
+.my-daohang2 li:hover {
+	background-color: #FF5722;
+	color: #fff;
+}
+
+.my-daohang2-2 { /*二级导航*/
+	border: 1px solid #FF5722;
+	position: absolute;
+	width: 800px;
+	height: 429px;
+	right: -802px;
+	background-color: #fff;
+	display: none;
+	z-index: 200;
+}
+/* 二级导航展示 */
+.my-daohang2-2 a {
+	display: block;
+	color: #666;
+}
+
+.my-daohang2-2 a:HOVER {
+	color: #ff5722;
+}
+
+.my-daohang2-sonObjTitle {
+	width: 60%;
+	height: 40px;
+	line-height: 40px;
+	text-indent: 10px;
+	font-size: 16px;
+	font-weight: bold;
+	clear: both;
+}
+
+.my-daohang2-tagDiv {
+	width: 60%;
+	clear: both;
+}
+
+.my-daohang2-tagTitle {
+	float: left;
+	margin: 10px 5;
+	font-size: 14px;
+	text-indent: 20px;
+}
+
+#test1 {
+	cursor: pointer;
+}
+/* 二级导航右侧热销商品 */
+.my-daohang2-rightDiv{
+	border-left: 2px solid #e5e5e5;
+	width: 39%;
+	height: 100%;
+	position:absolute;
+	top:0px;
+	right: 0px;
+}
+.my-daohang2-rightDivTitle{
+	display: block;
+	color:#ff5722;
+	letter-spacing: 0px;
+	font-size: 16px;
+	height:70px;
+	line-height:70px;
+	text-align: center;
+	text-indent: 0px;
+}
+.my-daohang2-goodsImg{/* 存放每个商品的div */
+	height: 130px;
+	width: 110px;
+	padding: 0px;
+	text-indent: 0px;
+	text-align: center;
+	float: left;
+	margin: 10px 20px;
+}
+.my-daohang2-goodsImg img{ 
+}
+.my-daohang2-goodsTitle{
+	display:block;
+	width:100px;
+	height:20px;
+	line-height:20px;
+	margin:5px auto; 
+	color:#666;
+	font-size: 12px;
+	letter-spacing: 0px;
+	white-space:nowrap; /*文本不进行换行*/
+}
+.my-daohang2-goodsTitle:HOVER{
+	color:#ff5722;
+}
+.my-cximg { /*轮播下的促销图片*/
+	width: 275px;
+	height: 125px;
+	float: left;
+	margin-top: 10px;
+	border: 2px solid #fff;
+	cursor: pointer;
+}
+
+#my-cximg02 {
+	float: right;
+}
+
+/*轮播右侧登录*/
+.my-userlogin {
+	width: 90%;
+	height: 280px;
+	border: 1px solid #E5E5E5;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, .1);
+}
+
+.my-userlogin p {
+	text-align: center;
+	margin: 15px auto;
+}
+
+#my-touxiangimg {
+	margin-top: 25px;
+}
+
+#my-touxiangimg img {
+	width: 80px;
+	border-radius: 50%;
+}
+
+#my-username {
+	font-size: 16px;
+	cursor: default;
+}
+
+/*公告*/
+.my-announcement {
+	width: 90%;
+	height: 125px;
+	border: 1px solid #E5E5E5;
+	margin-top: 10px;
+	background-color: #fff;
+	box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, .1);
+}
+
+.my-announcement span {
+	display: block;
+	margin-left: 5px;
+	margin-top: 5px;
+	width: 50px;
+	height: 25px;
+	border-bottom: 2px solid #FF5722;
+	text-indent: 5px;
+}
+
+.my-announcement ul {
+	margin-top: 5px;
+	margin-left: 10px;
+}
+
+.my-announcement a:hover {
+	color: #FF5722;
+}
+
+/*商品列表*/
+.my-goods {
+	border: 1px solid #E5E5E5;
+	top: 50px;
+	/* margin-bottom: 50px; */
+	margin: 20px auto;
+	padding: 0px;
+	border-radius: 10px 10px 0px 0px;
+	padding-bottom: 20px;
+	background-color: #fff;
+}
+
+.my-goods-title { /*商品列表标题背景*/
+	width: 100%;
+	height: 50px;
+	background-color: #F3BF47;
+	border-radius: 10px 10px 0px 0px;
+	color: #fff;
+}
+
+.goods-title { /*楼层标题*/
+	display: block;
+	width: 100px;
+	height: 50px;
+	font-size: 18px;
+	text-align: center;
+	font-weight: bold;
+	line-height: 50px;
+	margin-left: 20px;
+	letter-spacing: 3px;
+	float: left;
+}
+
+/*楼层标题背景颜色风格*/
+.goods-title-1 {
+	background-color: #07C2B2;
+}
+
+.goods-title-2 {
+	background-color: #FB3F61;
+}
+
+.goods-title-3 {
+	background-color: #FFB800;
+}
+
+.goods-title-4 {
+	background-color: #28BFAC;
+}
+
+.goods-title-5 {
+	background-color: #FF4848;
+}
+
+/*更多商品按钮*/
+.more-goods {
+	display: block;
+	float: right;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+	margin-right: 20px;
+}
+
+.more-goods a {
+	color: #fff;
+}
+
+/*商品详细信息*/
+.goods-mess { /*独立商品展示的div*/
+	height: 340px;
+	padding: 20px;
+}
+
+.goods-img { /*商品图片*/
+	width: 345px;
+	height: 210px;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.goods-img:hover {
+	box-shadow: 2px 2px 7px #888888;
+}
+
+.goods-price { /*商品价格*/
+	height: 40px;
+	width: 150px;
+	float: left;
+	text-align: left;
+	line-height: 40px;
+	color: #FF4400;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.goods-sellnum { /*销量*/
+	height: 40px;
+	width: 150px;
+	float: right;
+	text-align: right;
+	line-height: 40px;
+	padding-right: 5px;
+	color: gray;
+	font-size: 15px;
+}
+
+.goods-biaoti { /*商品标题*/
+	height: 50px;
+	clear: both;
+	line-height: 25px;
+}
+
+.goods-biaoti a {
+	color: #3D3D3D;
+}
+
+.goods-biaoti a:hover {
+	color: #FF4400;
+	text-decoration: underline;
+}

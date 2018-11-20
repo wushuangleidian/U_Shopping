@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>优爱购 - 平台登录</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<link rel="stylesheet" href="css/header.css" />
+		<link rel="stylesheet" href="css/login-reg.css" />
+		<link rel="stylesheet" href="css/yzmStyle.css" />
+		<script type="text/javascript" src="js/yzm.js" ></script>
+		<script>
+			$(".back-index").click(function(){
+			});
+			
+			//登录验证
+			function loginYz(){
+				if(!hkrel){
+					$("#login-result").text("验证无效，重新滑动验证！").show()
+					return false;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<!--显示logo-->
+		<div class="layui-col-md2" style="left: 20%;">
+			<div class="my-logo back-index">
+				<span>购</span>
+			</div>
+			<div class="back-index my-logo-font" style="top:25px;left: 60px;">
+				优爱购
+			</div>
+		</div>
+		<!--显示logo end-->
+		
+		<div class="my-body">
+		<!--登录-->
+		<div class="my-logindiv">
+			
+			<img src="img/bg.png" width="100%" />
+			<div class="my-login-inp">
+				<span>会员登陆</span>
+				<form action="" onsubmit="return loginYz()" method="">
+					<p>
+						<input class="login-inp" type="text" name="" placeholder="输入用户名/邮箱" />
+					</p>
+					<p>
+						<input class="login-inp" type="password" name=""  placeholder="输入密码"/>
+					</p>
+					<font id="yz-font">验证：</font>
+						<div id="hkdiv" style="top: 200px;right: 50px;">
+							<font>按住滑块，拖到最右侧</font>
+							<div id="green"></div>
+							<div id="kuai">>></div>
+						</div>
+					<p style="margin-top: 90px;margin-bottom: 5px;">
+						<input class="login-submit" type="submit" value="登录" />
+					</p> 
+				</form>
+				<!--会员注册、忘记密码-->
+				<div id="login-result"></div>
+				<div class="my-reg">
+					<a href="">忘记密码？</a>&nbsp;&nbsp;&nbsp;&nbsp;
+					<a href="reg.html">去注册</a>
+				</div>
+			</div>
+		</div>
+		<!--登录end-->
+		
+		<!--引入底部-->
+			<div class="my-footer">
+				<iframe src="footer.html" scrolling="no" style="border: 0px;width: 100%;height: 291px;"></iframe>
+			</div>
+		<!--引入底部end-->
+		</div>
+	</body>
+</html>

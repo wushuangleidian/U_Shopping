@@ -1,0 +1,46 @@
+/*验证码样式*/
+
+* {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+#hkdiv {
+	position: absolute;
+	width: 246px;
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	text-indent: 40px;
+	background-color: #d4d4d4;
+	color: #fff;
+}
+
+#green {
+	position: absolute;
+	height: 100%;
+	width: 20px;
+	background-color: #7BBB55;
+	top: 0px;
+	line-height: 40px;
+	text-align: left;
+	text-indent: 80px;
+	color: #fff;
+}
+
+#kuai {
+	border: 1px solid gray;
+	position: absolute;
+	height: 44px;
+	width: 44px;
+	background-color: #fff;
+	top: -2px;
+	left: 0px;
+	color: gray;
+	text-align: center;
+	text-indent: 0px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>结算</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/shopping.css" />
+		<link rel="stylesheet" href="css/buy.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="layer/layer.js" ></script>
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script>
+			
+			$(function(){
+				
+				//地址栏鼠标悬停事件，显示编辑和删除按钮
+				$(".my-showAddress").mouseenter(function(){
+					$(this).children(".my-address-edit").show();
+				});
+				$(".my-showAddress").mouseleave(function(){
+					$(this).children(".my-address-edit").hide();
+				});
+				//地址栏点击事件
+				$(".my-showAddress").click(function(){
+					$(this).addClass("sel");
+					$(this).siblings().removeClass("sel");
+				});
+				//点击添加新地址事件
+				 $('#addAddress').on('click', function(){
+    				layer.open({
+					  type: 2,
+					  area: ['700px', '450px'],
+					  fixed: true, //不固定
+					  maxmin: false,
+					  title: '新增收货地址',
+					  anim:1,
+					  /*scrollbar:false,*///禁止滚动
+					  shadeClose:true,
+					  content: 'shouhuo.html'
+					});	
+  				});
+  				
+  				$("#buyBtn").click(function(){
+  					location.href = "pay.html";
+  				});
+			});
+			
+			
+		</script>
+		
+	</head>
+	<body>
+		<div id="bg"></div>
+		<div id="addAdrInp">
+			<h2>添加收件人</h2>
+			<p>收件人：<input type="text" id="name" /></p>
+			<p>电话：<input type="text" id="phone" /></p>
+			<p>地址：<input type="text" id="adr" /></p>
+			<p><button id="buy-subBtn">添加</button></p>
+		</div>
+		
+		<!-- 引入头部 -->
+		<div>
+			<iframe src="header.html" scrolling="no" style="height:180px;width: 100%;border: 0px;"></iframe>
+		</div>
+		<!--引入头部end-->
+		
+		<hr style="height: 10px; background-color: #FF4400;" />
+		
+		<!--收货地址部分-->
+		<div class="layui-container">
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+				<legend>收货地址</legend>
+			</fieldset>
+			<div class="layui-row">
+				<div class="layui-col-md12">
+					<!-- 添加收货地址按钮 -->
+					<button id="addAddress" class="layui-btn layui-btn-normal">
+						<i class="layui-icon layui-icon-add-1"></i>
+						新增收货地址
+					</button><br />
+					<!-- 显式收货地址 -->
+					<div class="my-showAddress sel" >
+						<p style="border-bottom:1px solid gainsboro;">
+							张三（收）&nbsp;&nbsp;13099998888
+						</p>
+						<p>
+							河南&nbsp;郑州&nbsp;管城区
+						</p>
+						<p>
+							中州大道航海路交叉口富田太阳城B座1501
+						</p>
+						<p class="my-address-edit">
+							<a href="">编辑</a>
+							<a href="">删除</a>
+						</p>
+					</div>
+					<div class="my-showAddress" >
+						<p style="border-bottom:1px solid gainsboro;">
+							张三（收）&nbsp;&nbsp;13099998888
+						</p>
+						<p>
+							河南&nbsp;郑州&nbsp;管城区
+						</p>
+						<p>
+							中州大道航海路交叉口富田太阳城B座1501
+						</p>
+						<p class="my-address-edit">
+							<a href="">编辑</a>
+							<a href="">删除</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			
+		</div>
+		<!--收货地址end-->
+		
+		<!--商品清单-->
+		<div class="layui-container" style="top:-30px;">
+			<div class="layui-row">
+				<div class="layui-col-md12">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+						<legend>商品清单</legend>
+					</fieldset>
+
+					<table class="layui-table my-shopping-table" lay-skin="line">
+						<colgroup>
+							<col width="160">
+							<col width="">
+							<col width="100">
+							<col width="100">
+							<col width="100">
+							<col width="80">
+						</colgroup>
+						<thead>
+							<tr>
+								<th style="font-weight: bold;">
+									
+								</th>
+								<th style="font-weight: bold;">
+									商品信息
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									单价
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									数量
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									合计
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									操作
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<a href="">
+										<img src="img/zt.jpg" width="80px" />
+									</a>
+								</td>
+								<td>
+									<a href="">
+										Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色
+									</a>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									×1件
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<a href="">删除</a>
+								</td>
+							</tr>
+							
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--商品清单end-->
+		
+		<!--付款部分-->
+		<div class="layui-container" style="top: -20px;">
+			<div class="layui-row  my-shopping-buy">
+				<div class="layui-col-md12">
+					<div class="my-buyCheck">
+					</div>
+					<div class="my-buyBtn">
+						总价：
+						<font style="font-size: 20px;font-weight: bold;color:#FF4400;">￥9999</font>
+						<button id="buyBtn">去付款</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!--付款部分end-->
+			<!--引入底部-->
+			<div class="my-footer">
+				<iframe src="footer.html" scrolling="no" style="border: 0px;width: 100%;height: 291px;"></iframe>
+			</div>
+			<!--引入底部end-->
+	</body>
+</html>

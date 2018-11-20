@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>付款</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/shopping.css" />
+		<link rel="stylesheet" href="css/buy.css" />
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="layer/layer.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<style>
+			/*购买商品信息*/
+			
+			.my-pay-goodsMess {
+				height: 100px;
+			}
+			
+			.my-pay-goodsMess p {
+				height: 50px;
+				line-height: 50px;
+				text-indent: 50px;
+			}
+			/*付款方式图标*/
+			
+			.paytype-image {
+				display: block;
+				float: left;
+				width: 180px;
+				height: 55px;
+				margin: 20px 20px;
+				cursor: pointer;
+				border: 2px solid #fff;
+				opacity: 0.6;
+			}
+			
+			.payimg-sel {
+				border: 2px solid #FF4400;
+				opacity: 1;
+			}
+			
+			.paytype-image:hover {
+				opacity: 1;
+			}
+		</style>
+		<script>
+			$(function() {
+				//选择付款方式
+				$(".paytype-image").click(function() {
+					$(this).addClass("payimg-sel");
+					$(this).siblings().removeClass("payimg-sel");
+				});
+
+				//点击付款按钮
+				$("#buyBtn").click(function() {
+					layer.confirm('是否已完成付款？', {
+						btn: ['已付款', '遇到问题'] //按钮
+					}, function() {
+						//已完成付款
+						location.href = "payResult.html";
+					}, function() {
+						//未完成付款
+						layer.msg('是否重新支付？', {
+							time: 20000, //20s后自动关闭
+							btn: ['支付', '算了']
+						});
+					});
+				});
+
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<!-- 引入头部 -->
+		<div>
+			<iframe src="header.html" scrolling="no" style="height:180px;width: 100%;border: 0px;"></iframe>
+		</div>
+		<!--引入头部end-->
+
+		<hr style="height: 10px; background-color: #FF4400;" />
+
+		<!--商品信息部分-->
+		<div class="layui-container">
+			<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+				<legend>商品信息</legend>
+			</fieldset>
+			<div class="layui-row">
+				<div class="layui-col-md12 my-pay-goodsMess">
+					<p>
+						购买商品：&nbsp;&nbsp;<img src="img/zt.jpg" width="50px" /> Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色&nbsp;&nbsp; ￥6999元×1件&nbsp;&nbsp; 总价：￥6999
+					</p>
+					<p>
+						收件人：张三&nbsp;&nbsp; 13099998888&nbsp;&nbsp; 河南郑州&nbsp;&nbsp; 中州大道航海路交叉口富田太阳城B座1501
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<!--商品信息end-->
+
+		<!--付款方式-->
+		<div class="layui-container" style="top:-30px;">
+			<div class="layui-row">
+				<div class="layui-col-md12">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+						<legend>付款方式</legend>
+					</fieldset>
+					<img class="paytype-image payimg-sel" src="img/pay/pay_zfb.png" alt="支付宝" />
+					<img class="paytype-image" src="img/pay/pay_wx.png" alt="微信" />
+					<img class="paytype-image" src="img/pay/pay_jsyh.png" alt="建设银行" />
+					<img class="paytype-image" src="img/pay/pay_gsyh.png" alt="工商银行" />
+					<img class="paytype-image" src="img/pay/pay_nyyh.png" alt="农业银行" />
+					<img class="paytype-image" src="img/pay/pay_jtyh.png" alt="交通银行" />
+					<img class="paytype-image" src="img/pay/pay_zgyh.png" alt="中国银行" />
+					<img class="paytype-image" src="img/pay/pay_zsyh.png" alt="招商银行" />
+					<img class="paytype-image" src="img/pay/pay_zxyh.png" alt="中信银行" />
+					<img class="paytype-image" src="img/pay/pay_gdyh.png" alt="光大银行" />
+
+				</div>
+			</div>
+		</div>
+		<!--付款方式end-->
+
+		<!--支付部分-->
+		<div class="layui-container" style="top: -20px;">
+			<div class="layui-row  my-shopping-buy">
+				<div class="layui-col-md12">
+					<div class="my-buyCheck">
+					</div>
+					<div class="my-buyBtn">
+						总价：
+						<font style="font-size: 20px;font-weight: bold;color:#FF4400;">￥9999</font>
+						<button id="buyBtn">支付</button>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<!--支付部分end-->
+		<!--引入底部-->
+		<div class="my-footer">
+			<iframe src="footer.html" scrolling="no" style="border: 0px;width: 100%;height: 291px;"></iframe>
+		</div>
+		<!--引入底部end-->
+	</body>
+
+</html>

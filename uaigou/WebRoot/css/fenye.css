@@ -1,0 +1,44 @@
+/* 分页模块 */
+.my-fenye-mess{
+	display:block;
+	float:left;
+	margin:5px;
+	color:#333;
+	padding:6px 5px;
+}
+.my-fenye{
+	display: block;
+	float: left;
+	margin: 5px 3px;
+	border:1px solid #E2E2E2;
+}
+/* 页数 */
+.my-fenye-pageNum{
+	padding:6px 10px;
+}
+.my-fenye-end,.my-fenye-start,.my-fenye-pgup,.my-fenye-pgdn{
+	padding:5px 10px;
+}
+.my-fenye-this{
+	border:1px solid #ff5722;
+	background-color: #ff5722;
+	color:#fff;
+}
+.my-fenye-pageNum:hover,.my-fenye-end:hover,.my-fenye-start:hover,.my-fenye-pgup:hover,.my-fenye-pgdn:hover{
+	color:#ff5722;
+	border-color: #ff5722;
+}
+.my-fenye-this:hover{
+	color:#fff;
+}
+/*禁用按钮*/
+.my-fenye-disable{
+	color:#D2D2D2;
+	border-color: #D2D2D2;
+	cursor: not-allowed;
+}
+.my-fenye-disable:hover{
+	color:#D2D2D2;
+	cursor: not-allowed;
+	border-color: #D2D2D2;
+}

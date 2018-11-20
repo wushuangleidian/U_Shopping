@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>购物车</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<link rel="stylesheet" href="css/shopping.css" />
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+		
+		<script>
+			$(function() {
+
+				//设置加减按钮
+				var val = $("#goods-num").val();
+				$("#subBtn").click(function() {
+					//减法
+					if(val != null && !isNaN(val) && val > 0) {
+						val--;
+						$("#goods-num").val(val);
+					}
+				});
+				$("#sumBtn").click(function() {
+					if(val != null && !isNaN(val)) {
+						val++;
+						$("#goods-num").val(val);
+					}
+				});
+				//结算按钮
+				$("#buyBtn").click(function(){
+					window.location.href = "buy.html";
+				});
+			});
+
+			//数量输入事件
+			function inputNum(obj) {
+				var val = obj.value;
+				if(isNaN(val)) {
+					obj.value = '';
+				}
+				if(!isNaN(val) && val < 0) {
+					obj.value = abs(val);
+				}
+			}
+			
+			//全选按钮事件
+			function allCheck(obj){
+				var cb = document.getElementsByClassName("checkBox");
+				if(obj.checked){
+					for(var i=0;i<cb.length;i++){
+						cb[i].checked = true;
+					}
+				}else{
+					for(var i=0;i<cb.length;i++){
+						cb[i].checked = false;
+					}
+				}
+				
+			}
+			
+		</script>
+	</head>
+
+	<body>
+		<!-- 引入头部 -->
+		<div>
+			<iframe src="header.html" scrolling="no" style="height:180px;width: 100%;border: 0px;"></iframe>
+		</div>
+		<!--引入头部end-->
+		
+		<hr style="height: 10px; background-color: #FF4400;" />
+		
+		<!--购物车订单-->
+		<div class="layui-container" style="top:-30px;">
+			<div class="layui-row">
+				<div class="layui-col-md12">
+					<fieldset class="layui-elem-field layui-field-title" style="margin-top: 50px;">
+						<legend>购物车</legend>
+					</fieldset>
+
+					<table class="layui-table my-shopping-table" lay-skin="line">
+						<colgroup>
+							<col width="160">
+							<col width="">
+							<col width="100">
+							<col width="150">
+							<col width="100">
+							<col width="80">
+						</colgroup>
+						<thead>
+							<tr>
+								<th style="font-weight: bold;">
+									<input class="checkBox" type="checkbox" onclick="allCheck(this)" /> 全选
+								</th>
+								<th style="font-weight: bold;">
+									商品信息
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									单价
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									数量
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									合计
+								</th>
+								<th style="text-align: center;font-weight: bold;">
+									操作
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<input class="checkBox" type="checkbox" />
+									<a href="">
+										<img src="img/zt.jpg" width="80px" />
+									</a>
+								</td>
+								<td>
+									<a href="">
+										Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色
+									</a>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<button id="subBtn">-</button>
+									<input id="goods-num" type="text" oninput="inputNum(this)" />
+									<button id="sumBtn">+</button>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<a href="">删除</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input class="checkBox" type="checkbox" />
+									<a href="">
+										<img src="img/zt.jpg" width="80px" />
+									</a>
+								</td>
+								<td>
+									<a href="">
+										Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色
+									</a>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<button id="subBtn">-</button>
+									<input id="goods-num" type="text" oninput="inputNum(this)" />
+									<button id="sumBtn">+</button>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<a href="">删除</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input class="checkBox" type="checkbox" />
+									<a href="">
+										<img src="img/zt.jpg" width="80px" />
+									</a>
+								</td>
+								<td>
+									<a href="">
+										Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色
+									</a>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<button id="subBtn">-</button>
+									<input id="goods-num" type="text" oninput="inputNum(this)" />
+									<button id="sumBtn">+</button>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<a href="">删除</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input class="checkBox" type="checkbox" />
+									<a href="">
+										<img src="img/zt.jpg" width="80px" />
+									</a>
+								</td>
+								<td>
+									<a href="">
+										Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色
+									</a>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<button id="subBtn">-</button>
+									<input id="goods-num" type="text" oninput="inputNum(this)" />
+									<button id="sumBtn">+</button>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<a href="">删除</a>
+								</td>
+							</tr>
+							
+							<tr>
+								<td>
+									<input class="checkBox" type="checkbox" />
+									<a href="">
+										<img src="img/zt.jpg" width="80px" />
+									</a>
+								</td>
+								<td>
+									<a href="">
+										Apple iPhone X (A1865) 全面屏手机 64GB 深空灰色
+									</a>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<button id="subBtn">-</button>
+									<input id="goods-num" type="text" oninput="inputNum(this)" />
+									<button id="sumBtn">+</button>
+								</td>
+								<td align="center">
+									<span>￥6999<span>
+								</td>
+								<td align="center">
+									<a href="">删除</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+		<!--购物车订单end-->
+		
+		<!--结算部分-->
+		<div class="layui-container" style="top: -20px;">
+			<div class="layui-row  my-shopping-buy">
+				<div class="layui-col-md12">
+					<div class="my-buyCheck">
+						<input class="checkBox" type="checkbox" onclick="allCheck(this)" /> 全选
+						<a href="">
+							<i class="layui-icon layui-icon-delete"></i>
+							删除选中
+						</a>
+					</div>
+					<div class="my-buyBtn">
+						总价：
+						<font style="font-size: 20px;font-weight: bold;color: red;">￥9999</font>
+						<button id="buyBtn">去结算</button>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<!--结算部分end-->
+		
+		<!--引入底部-->
+		<div class="my-footer">
+			<iframe src="footer.html" scrolling="no" style="border: 0px;width: 100%;height: 291px;"></iframe>
+		</div>
+		<!--引入底部end-->
+	</body>
+
+</html>

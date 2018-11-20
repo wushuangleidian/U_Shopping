@@ -1,0 +1,72 @@
+/*商品信息*/
+
+.my-shopping-table a:hover {
+	color: #FF4400;
+}
+
+
+/*数量输入框*/
+
+#subBtn,
+#sumBtn {
+	width: 20px;
+	height: 25px;
+	cursor: pointer;
+	border: 1px solid #DDDDDD;
+	background-color: #fff;
+}
+
+#goods-num {
+	width: 49px;
+	height: 20px;
+	text-align: center;
+}
+#delSelBtn{
+	border:0px;
+}
+
+/*结算部分div*/
+
+.my-shopping-buy {
+	border: 1px solid #E6E6E6;
+	height: 50px;
+	background-color: #F2F2F2;
+}
+
+.my-buyCheck {
+	/*结算div全选框*/
+	width: 200px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 14px;
+	margin-left: 20px;
+	float: left;
+}
+
+.my-buyBtn {
+	/*结算按钮div*/
+	float: right;
+	width: 300px;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+}
+
+/*结算按钮*/
+.my-shopping-buyBtn {
+	border: 0px;
+	width: 100px;
+	height: 50px;
+	background-color: #FF4400;
+	color: #FFF;
+	font-size: 18px;
+	letter-spacing: 3px;
+	margin-left: 20px;
+	cursor: pointer;
+}
+.my-disable{
+	background-color: #F5F3EF;
+	border:1px solid #666;
+	color:#666A6E;
+}
+

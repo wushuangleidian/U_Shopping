@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>产品列表</title>
+		<link rel="stylesheet" href="layui/css/layui.css" />
+		<script type="text/javascript" src="layui/layui.js" ></script>
+		<script type="text/javascript" src="js/jquery-3.3.1.min.js" ></script>
+		<link rel="stylesheet" href="css/index.css" />
+		<style>
+				/*二级导航*/
+				.my-list-ejdh{
+					border: 1px solid #E5E5E5;
+					height: 120px;
+					top: 20px;
+				}
+				/*二级导航下的分类*/
+				.my-list-ejdh-a{
+					display: block;
+					float: left;
+					width: 80px;
+					height: 25px;
+					text-align: center;
+					line-height: 25px;
+					margin: 5px 5px;
+				}
+				.my-list-ejdh a:hover{
+					color: #FF4400;
+				}
+				/*排序*/
+				.my-list-paixu{
+					border: 1px solid #E5E5E5;
+					height: 50px;
+					background-color: #fff;
+					margin-top: 30px;
+				}
+				.my-list-paixu-a{
+					display: block;
+					width: 100px;
+					height: 50px;
+					text-align: center;
+					line-height: 50px;
+					font-size: 14px;
+					float: left;
+				}
+				.my-list-paixu-a:hover{
+					background-color: #FF4400;
+					color: #fff;
+				}
+			</style>
+		<script>
+			$(function(){
+				//纵向导航列表的二级导航的显示和隐藏
+				$(".my-daohang2 li").mouseenter(function(){
+					$(".my-daohang2-2").show();
+				});
+				$(".my-daohang2 li").mouseleave(function(){
+					$(".my-daohang2-2").hide();
+				});
+				$(".my-daohang2-2").mouseenter(function(){
+					$(this).show();
+				});
+				$(".my-daohang2-2").mouseleave(function(){
+					$(this).hide();
+				});
+				
+				//轮播下方促销图片的悬停事件
+				$(".my-cximg").mouseenter(function(){
+					$(this).css({"border-color":"#FF5722"});
+				});
+				$(".my-cximg").mouseleave(function(){
+					$(this).css({"border-color":"#FFF"});
+				});
+				
+				//回到顶部按钮
+				$("#my-backtop").click(function(){
+					$("html,body").animate({
+						 scrollTop: 0
+					},500);
+				});
+				
+				//鼠标滚动事件，显式回到顶部按钮
+			});
+		</script>
+	</head>
+	
+	
+	<body>
+		
+		<!-- 引入头部 -->
+		<div>
+			<iframe src="header.html" scrolling="no" style="height:200px;width: 100%;border: 0px;"></iframe>
+		</div>
+		<!--引入头部end-->
+		
+		<div class="my-index-body">
+			<!--横向导航栏-->
+			<div class="my-daohang1">
+				<div class="layui-container">
+					<div class="layui-row">
+						<!--菜单-->
+						<div class="layui-col-md9" style="height: 50px;">
+							<a href="">首页</a>
+							<a href="">优抢购</a>
+							<a href="">聚划算</a>
+							<a href="">大转盘</a>
+							<a href="">会员折扣</a>
+							<a href="">买家秀</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--横向导航end-->
+			
+			
+			<!--促销活动部分-->
+			<div class="my-cuxiaodiv">
+				
+			</div>
+			<!--促销活动部分end-->
+			
+			<!-- 二级导航部分 -->
+			<div class="my-list-ejdh layui-container">
+				<p>
+					<strong class="my-list-ejdh-a">分类：</strong>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+					<a href="" class="my-list-ejdh-a">风衣</a>
+				</p>
+			</div>
+			<!--排序-->
+			<div class="my-list-paixu layui-container">
+				<a href="" class="my-list-paixu-a">按销量</a>
+				<a href="" class="my-list-paixu-a">按评分</a>
+				<a href="" class="my-list-paixu-a">价格升序</a>
+				<a href="" class="my-list-paixu-a">价格降序</a>
+			</div>
+			<!--二级导航部分end-->
+			
+			<!--商品展示部分-->
+			<div class="layui-container my-goods" style="border-radius: 0px;top: 10px;">
+				<!--商品列表-->
+				<div class="my-goods-list layui-row">
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="jsp/goodsMess.html">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="jsp/goodsMess.html">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+					<!---->
+					
+					<div class="goods-mess layui-col-md4">
+						<!--产品图片-->
+						<div class="goods-img">
+							<a href="">
+								<img src="img/02.jpg" />
+							</a>
+						</div>
+						<!--产品价格-->
+						<p class="goods-price">￥1399.99</p>
+						<!--产品销量-->
+						<p class="goods-sellnum">月销：1000笔</p>
+						<!--产品标题-->
+						<p class="goods-biaoti">
+							<a href="">
+								秋季新款小白鞋子男帆布运动鞋韩版白色休闲鞋百搭潮流板鞋男鞋潮
+							</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+			<!--商品展示部分end-->
+			
+			<!-- 分页 -->
+			<div class="my-pagebrake" style="height: 80px;text-align: center;">
+				<div id="test1"></div>
+			</div>
+			<!-- 分页end -->
+			
+			<!--引入底部-->
+			<div class="my-footer">
+				<iframe src="footer.html" scrolling="no" style="border: 0px;width: 100%;height: 291px;"></iframe>
+			</div>
+			<!--引入底部end-->
+			
+			<!--回到顶部按钮-->
+			<div id="my-backtop">
+				<span class="layui-icon layui-icon-up"></span>
+			</div>
+			
+		</div>
+		
+		
+		
+	</body>
+	<script>
+		layui.use(['element','carousel','laypage'], function(){
+  			var element = layui.element;
+  			var carousel = layui.carousel;
+  			var laypage = layui.laypage;
+  
+			  //执行一个laypage实例
+			  laypage.render({
+			    elem: 'test1'
+			    ,count: 100
+			    ,theme: '#FF5722'
+			  });
+  			
+			  //建造实例
+			  carousel.render({
+			    elem: '#test1'
+			    ,width: '100%' //设置容器宽度
+			    ,arrow: 'always' //始终显示箭头
+			    //,anim: 'updown' //切换动画方式
+			  });
+		});
+	</script>
+</html>

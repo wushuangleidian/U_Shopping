@@ -1,0 +1,23 @@
+优爱购模块开发步骤：
+
+	1、在cn.uaigou.entity包下创建实体类；
+
+	2、在cn.uaigou.daoimpl包下创建Dao的实现类，在Dao实现类中，实例化QueryRunner对象
+
+		QueryRunner qr = new TxQueryRunner();
+
+	3、在Dao实现类中编写CRUD方法；
+
+	4、在beanfactory.properties配置文件中注册
+
+	5、在cn.uaigou.serviceimpl包下创建Service的实现类，使用BeanBuilderFactory.daoBuiler(String key)创建Dao对象
+
+	6、完成Service实现类中的方法；
+
+	7、把Service的实现类注册到配置文件中；
+
+	8、创建User相关的Servlet类，处理请求和响应；自定义Servlet类，继承BaseServlet；
+
+	9、在Servlet类中，通过BeanBuilderFactory.serviceBuiler(String key)创建Service对象；
+
+	10、使用BeanUtil.getObje(Map,Class);方法封装表单提交的参数；

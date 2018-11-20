@@ -1,0 +1,150 @@
+/*商品主图div*/
+
+.my-goodsMess-firstImg {
+	border: 1px solid #EEEEEE;
+	width: 435px;
+	height: 435px;
+	overflow: hidden;
+	margin: 5px auto;
+	text-align: center;
+	line-height: 435px;
+}
+
+#firstImg{
+	width:435px;
+	height:435px;
+} 
+
+/*图片展示*/
+
+.my-goodsMess-images {
+	width: 440px;
+	margin: 5px auto;
+}
+
+.my-goodsMess-images img {
+	display: block;
+	float: left;
+	margin: 10px 4px;
+	width: 76px;
+	border: 2px solid #eee;
+}
+
+
+/*商品信息*/
+
+.my-goodsmessage {
+	padding: 20px;
+	margin: 10px 0px;
+}
+
+
+/*商品标题*/
+
+.my-goodsMess-title {
+	font-family: "微软雅黑";
+	font-size: 24px;
+	color: #333;
+	height: 50px;
+	line-height: 50px;
+}
+
+
+/*商品副标题*/
+
+.my-goodsMess-subhead {
+	color: #9f9f9f;
+	font-size: 13px;
+}
+
+
+/*商品促销*/
+
+.my-goodsMess-cuxiao {
+	font-family: "微软雅黑";
+	font-size: 13px;
+	color: #666a6e;
+	background-color: #f5f3ef;
+}
+
+.my-goodsMess-cuxiao p {
+	height: 40px;
+	line-height: 40px;
+}
+
+
+/*商品价格*/
+
+.my-goodsMess-price {
+	margin-left: 20px;
+	font-family: "微软雅黑";
+	font-size: 18px;
+	color: #d7282d;
+}
+
+.my-goodsMess-price b {
+	font-size: 28px;
+}
+
+.my-goodsMess-cxmess {
+	margin-left: 20px;
+	color: #d7282d;
+}
+
+.my-goodsMess-fuwu {
+	margin-left: 20px;
+}
+
+
+/*规格*/
+
+.my-goodsMess-guige {
+	border: 1px solid #ccc;
+	padding: 5px 10px;
+	margin: 0px 5px;
+	cursor: pointer;
+	color: #888;
+}
+
+.my-goodsMess-guige-sel {
+	border: 1px solid #d7282d;
+	padding: 5px 10px;
+	margin: 0px 5px;
+	cursor: pointer;
+	color: #d7282d;
+}
+
+
+/*购买数量*/
+
+.my-goodsMess-numbtn {
+	border: 1px solid #888;
+	background-color: #fff;
+	width: 25px;
+	height: 30px;
+	font-size: 16px;
+	color: #888;
+	cursor: pointer;
+}
+
+#goodsNum {
+	width: 50px;
+	height: 30px;
+	padding: 0px 10px;
+}
+
+
+/*在线客服*/
+
+.my-goodsMess-kefu {
+	height: 30px;
+	line-height: 30px;
+	font-size: 14px;
+	font-weight: bold;
+	text-indent: 10px;
+}
+
+#qqkefu {
+	display: block;
+	margin: 5px auto;
+}

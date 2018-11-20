@@ -1,0 +1,142 @@
+/*顶部样式*/
+
+.my-header {
+	/*顶部布局*/
+	height: 40px;
+	background-color: #F5F5F5;
+	margin-bottom: 25px;
+}
+
+.my-header p {
+	position: absolute;
+	height: 40px;
+	line-height: 40px;
+}
+
+.my-login {
+	left: 13%;
+}
+
+.my-order {
+	right: 13%;
+}
+
+.my-header a {
+	display: block;
+	float: left;
+	height: 43px;
+	margin: 0px 10px;
+	z-index: 110;
+}
+
+.my-header a:hover {
+	color: #FF5722;
+}
+
+.xldh {
+	/*下拉导航*/
+	border: 1px solid #E5E5E5;
+	position: absolute;
+	width: 60%;
+	height: 150px;
+	right: 13%;
+	top: 40px;
+	z-index: 100;
+	background-color: #fff;
+	box-shadow: 6px 8px 10px 0px rgba(0, 0, 0, .1);
+	display: none;
+}
+
+
+/*搜索部分*/
+
+.my-logo {
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-top: 23px;
+	float: left;
+	background-color: #FF5722;
+	/*主色调*/
+	border-radius: 10px;
+	font-size: 22px;
+	text-align: center;
+	color: #FF5722;
+}
+
+.my-logo span {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+	display: block;
+	width: 43px;
+	height: 43px;
+	border-radius: 50%;
+	background-color: #FFF;
+	line-height: 43px;
+}
+
+.my-logo-font {
+	position: absolute;
+	width: 120px;
+	font-size: 30px;
+	padding: 0px;
+	top: 35px;
+	left: 65px;
+	font-weight: bold;
+	color: #FF5722;
+}
+
+
+/*搜索部分*/
+
+.my-search {
+	/*搜索框*/
+	position: absolute;
+	width: 462px;
+	height: 40px;
+	border: 1px solid #FF5722;
+	font-size: 16px;
+	text-indent: 20px;
+	line-height: 40px;
+	top: 38px;
+	left: 29px;
+}
+
+.my-search-btn {
+	/*搜索按钮*/
+	position: absolute;
+	width: 88px;
+	height: 42px;
+	background-color: #FF5722;
+	text-align: center;
+	line-height: 40px;
+	font-size: 20px;
+	color: #fff;
+	border-radius: 0px 10px 10px 0px;
+	top: 38px;
+	left: 493px;
+	cursor: pointer;
+}
+
+
+/*购物车*/
+
+.my-shopping {
+	border: 1px solid #E3E4E5;
+	position: absolute;
+	width: 190px;
+	height: 36px;
+	background-color: #fff;
+	text-align: center;
+	line-height: 36px;
+	font-size: 15px;
+	color: red;
+	font-weight: bold;
+	cursor: pointer;
+	top: 43px;
+}
+
+.my-shopping:hover {
+	border-color: red;
+}

@@ -1,0 +1,48 @@
+构建流程步骤：
+
+	1、创建实体类；
+
+	2、创建IDao接口的实现类；
+
+	3、在beanfactory.properties文件中配置IDao实现类的相关信息，键和值全部是类的全路径；
+
+	4、创建IService接口的实现类；
+
+	5、在beanfactory.properties文件中配置IService实现类的相关信息，键和值全部是类的全路径；
+
+	6、在IService中，通过BeanBuilderFactory工厂类的daoBuilder(String key)工厂方法创建Dao对象
+
+		例：IDao dao = BeanBuilderFactory.daoBuilder("cn.uaigou.daoimpl.DemoDaoImpl");
+
+	7、在Servlet中，通过BeanBuilderFactory工厂类的serviceBuiler(String key)工厂方法创建Service对象
+
+		例：IService service = BeanBuilderFactory.serviceBuiler("cn.uaigou.serviceimpl.DemoServiceImpl");
+
+
+Dao实现类中的CRUD操作：
+
+	1、获取数据库连接对象，QueryRunner qr = new TxQueryRunner();
+
+	2、创建SQL模板；
+
+	3、创建参数的数组对象；
+	
+	4、调用update()或query()方法
+
+
+Servlet中封装参数操作：
+
+	1、jsp页面中的form表单项中name属性要符合Javabean规范；
+
+	2、在Servlet中调用 Demo demo =  BeanUtil.getObject(request.getParameterMap(), Demo.class); 实现参数封装；
+
+	3、不符合Javabean规范的参数，继续使用request.getParameter(""); 接收参数；
+
+
+
+
+
+
+
+
+
